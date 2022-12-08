@@ -74,7 +74,7 @@ class wordle:
             if user_input == self.wordle:
                 print('단어를 맞추었습니다. 축하합니다.')
                 break
-            if self.game_count > 6:
+            if self.game_count == 6:
                 print(self.print_game_status())
                 print('단어를 맞추지 못하였습니다.')
                 break
