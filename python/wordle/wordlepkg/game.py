@@ -67,7 +67,7 @@ class wordle:
     def play(self):
         self.game_mode()
         while True:
-            print(self.wordle)
+           
             self.print_game_status()
             user_input = self.user_input()
             if wordle.is_valid_word(user_input):
