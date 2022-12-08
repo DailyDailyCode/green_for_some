@@ -50,7 +50,6 @@ class wordle:
         
         while True:
             try:
-                input_game == 'y' or input_game == 'n'
                 if input_game == 'y':
                     self.wordle = random.choice(self.hard_5_word)
                     break
