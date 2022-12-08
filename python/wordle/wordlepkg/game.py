@@ -49,15 +49,17 @@ class wordle:
         print('\n\033[1m게임 설명:\033[0m 정답과 위치가 같은 글자는 \033[92m초록색\033[0m 으로 표시되고 글자는 같지만 정답과 위치가 다른 글자는 \033[33m노란색\033[0m으로 표시됩니다. \n 그외의 글자는 \033[90m회색\033[0m으로 표시됩니다.')
         
         while True:
-            if input_game == 'y':
-                self.wordle = random.choice(self.hard_5_word)
-                break
-            elif input_game == 'n':
-                self.wordle = random.choice(self.easy_5_word)
-                break
-            else:
-                input_game = input('재대로 입력해주세요.')
-                continue
+            try:
+                input_game == 'y' or input_game == 'n'
+                if input_game == 'y':
+                    self.wordle = random.choice(self.hard_5_word)
+                    break
+
+                else:
+                    self.wordle = random.choice(self.easy_5_word)
+                    break
+            except:
+                print('재대로 입력해주세요.')
 
     def play(self):
         self.game_mode()
