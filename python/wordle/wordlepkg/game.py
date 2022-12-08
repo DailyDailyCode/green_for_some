@@ -55,9 +55,13 @@ class wordle:
                     self.wordle = random.choice(self.hard_5_word)
                     break
 
-                else:
+                elif input_game == 'n':
                     self.wordle = random.choice(self.easy_5_word)
                     break
+                else:
+                    input_game = input('게임 모드를 설정합니다. 어려운 모드를 플레이 하실거면 ''y'' 쉬운 모드를 플레이 하려면 ''n''을 입력해주세요.')
+                    continue
+
             except:
                 print('재대로 입력해주세요.')
 
