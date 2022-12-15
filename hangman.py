@@ -109,5 +109,9 @@ class Hangman():
               print('\n'.join(HANGMAN[:self.failed_attempts]))
               print("\n-----You lost!")
               break
-
+import random
+if __name__ == '__main__':
+    word_to_guess = random.choice(WORDS)
+    hangman = Hangman(word_to_guess)
+    hangman.play()
 
