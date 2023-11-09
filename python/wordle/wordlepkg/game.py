@@ -2,7 +2,7 @@ import english_words as eng
 import random 
 class wordle:
 
-    hard_5_word = [x for x in eng.english_words_lower_set if len(x) == 5]
+    hard_5_word = [x for x in eng.english_words_lower_set(lower=True) if len(x) == 5]
     easy_5_word = ['dream', 'india', 'angry', 'sheep', 'fault', 'stone', 'trend', 'sweet'
     , 'mouth', 'agree', 'storm', 'apple', 'think']
     def __init__(self):
